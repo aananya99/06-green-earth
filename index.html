@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Earth Website</title>
+    <!-- daisy UI and tailwind cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon" />
+  </head>
+  <body class="bg-[#f0fdf4]">
+    <header>
+      <nav>
+        <div class="navbar bg-[#15803d] shadow-sm p-4">
+          <div class="navbar-start flex items-center gap-2">
+            <img src="./assets/logo.jpg" alt="logo" class="w-12 rounded-full" />
+            <h2 class="text-xl text-white font-semibold">Green Earth</h2>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 text-white font-semibold">
+              <li><a href="">About</a></li>
+              <li><a href="">Gallary</a></li>
+              <li><a href="">Plant a Tree</a></li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <button
+              class="btn bg-[#facc15] text-[#15803d] font-semibold rounded-full border-none"
+            >
+              Plant a Tree
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <section class="sm:flex justify-between items-center gap-5 bg-[#cff0dc]">
+        <img
+          src="./assets/hero-leaf1.png"
+          alt="left-banner img"
+          class="hidden md:block"
+        />
+        <div class="flex flex-col items-center gap-3 py-5">
+          <h2 class="text-3xl font-bold text-[#1f2937]">
+            Plant a Tree, Grow a Future
+          </h2>
+          <p class="text-sm text-[#1f293780] text-center">
+            Join our mission to plant 1 million trees and make the Earth greener
+            for future generations.
+          </p>
+          <button
+            class="btn bg-[#facc15] text-[#15803d] font-semibold rounded-full border-none"
+          >
+            Get Involved
+          </button>
+        </div>
+        <img
+          src="./assets/hero-leaf2.png"
+          alt="right-banner img"
+          class="hidden md:block"
+        />
+      </section>
+    </header>
+
+    <main>
+      <h2 class="text-2xl font-bold text-center my-15">Choose Your Trees</h2>
+      <section class="w-11/12 mx-auto flex my-10 gap-5">
+        <div class="w-1/11 mx-auto">
+          <h3 class="text-xl font-bold mb-3">Categories</h3>
+          <ul id="category-names" class="space-y-1">
+            <li>All Plants</li>
+          </ul>
+        </div>
+
+        <div class="w-8/11 mx-auto">
+          <div id="tree-card-container" class="grid sm:grid-cols-3 gap-5"></div>
+        </div>
+
+        <div class="w-2/11 mx-auto bg-green-300">
+          <h2>cart</h2>
+        </div>
+      </section>
+
+      <section class="w-9/12 mx-auto my-20">
+        <h2 class="text-2xl font-bold text-center">About the Campaign</h2>
+        <div class="mt-10 flex justify-between items-center gap-10">
+          <img
+            src="./assets/about.png"
+            alt="about image"
+            class="w=[530px] h-[530px]"
+          />
+
+          <div class="text-sm text-[#1f293790] space-y-3 text-left">
+            <p>
+              Green Earth is a global tree plantation initiative dedicated to
+              fighting climate change. Since our start, we’ve planted over
+              500,000 trees worldwide. By joining our campaign, you help restore
+              forests, create habitats for wildlife, and combat global warming.
+            </p>
+            <ul class="pl-4 list-disc space-y-2">
+              <li>Restoration of natural habitats</li>
+              <li>Improvement of air quality</li>
+              <li>Support for local communities</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="w-11/12 mx-auto bg-[#cff0dc] p-20 space-y-5 mt-15">
+        <h2 class="text-2xl font-bold text-center">Our Impact</h2>
+
+        <div class="flex justify-around items-center gap-3">
+          <div class="card card-border bg-base-100 w-96">
+            <div class="card-body flex flex-col justify-center items-center">
+              <h2 class="text-2xl text-[#15803d] font-bold">500K+</h2>
+              <p class="text-sm text-[#1f293790]">Trees Planted</p>
+            </div>
+          </div>
+          <div class="card card-border bg-base-100 w-96">
+            <div class="card-body flex flex-col justify-center items-center">
+              <h2 class="text-2xl text-[#15803d] font-bold">120+</h2>
+              <p class="text-sm text-[#1f293790]">Communities Involved</p>
+            </div>
+          </div>
+          <div class="card card-border bg-base-100 w-96">
+            <div class="card-body flex flex-col justify-center items-center">
+              <h2 class="text-2xl text-[#15803d] font-bold">30+</h2>
+              <p class="text-sm text-[#1f293790]">Countries Reached</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#166534] space-y-5 p-20 flex flex-col items-center">
+        <h2 class="text-2xl font-bold text-center text-white">
+          Plant a Tree Today
+        </h2>
+        <fieldset
+          class="fieldset bg-base-200 border-base-300 rounded-box w-lg border-none p-8 space-y-3 bg-[#15803d]"
+        >
+          <input type="text" class="input w-full" placeholder="Your Name" />
+          <input
+            type="email"
+            class="input w-full"
+            placeholder="Your Email Address"
+          />
+          <select class="select w-full">
+            <option>Number of Trees</option>
+            <option>1 Tree - $5</option>
+            <option>5 Trees - $25</option>
+            <option>10 Trees - $50</option>
+          </select>
+          <button
+            class="btn bg-[#facc15] text-[#15803d] font-bold rounded-full border-none"
+          >
+            Donate Now
+          </button>
+        </fieldset>
+      </section>
+      <footer
+        class="bg-[#14522D] shadow-sm footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4"
+      >
+        <aside>
+          <p class="text-white">© 2025 Green Earth. All Rights Reserved.</p>
+        </aside>
+      </footer>
+    </main>
+    <script src="./script/index.js"></script>
+  </body>
+</html>
