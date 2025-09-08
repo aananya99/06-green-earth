@@ -12,8 +12,9 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./assets/logo.jpg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-[#f0fdf4]">
+  <body class="bg-[#f0fdf4] border-2 border-red-800 overflow-x-hidden">
     <header>
       <nav>
         <div class="navbar bg-[#15803d] shadow-sm p-4">
@@ -44,9 +45,9 @@
         <img
           src="./assets/hero-leaf1.png"
           alt="left-banner img"
-          class="hidden md:block"
+          class="hidden md:block max-w-full h-auto"
         />
-        <div class="flex flex-col text-center gap-3 py-5">
+        <div class="flex flex-col items-center gap-3 text-center">
           <h2 class="text-3xl font-bold text-[#1f2937] sm:text-center">
             Plant a Tree, Grow a Future
           </h2>
@@ -60,32 +61,50 @@
             Get Involved
           </button>
         </div>
+
         <img
           src="./assets/hero-leaf2.png"
           alt="right-banner img"
-          class="hidden md:block"
+          class="hidden md:block max-w-full h-auto"
         />
       </section>
     </header>
 
     <main>
-      <h2 class="text-2xl font-bold text-center my-15">Choose Your Trees</h2>
-      <section class="md:w-11/12 mx-auto flex flex-col md:flex-row my-10 gap-5">
-        <div class="w-1/11 mx-auto md:w-1/6">
+      <h2 class="text-2xl font-bold text-center my-16">Choose Your Trees</h2>
+
+      <dialog id="plant_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+          <div id="details-container" class=""></div>
+          <div class="modal-action">
+            <form method="dialog">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn">Close</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+
+      <section
+        class="max-w-[1280px] mx-auto flex flex-col md:flex-row my-10 gap-3"
+      >
+        <div class="w-full md:w-1/6">
           <h3 class="text-xl font-bold mb-3">Categories</h3>
-          <ul id="category-names" class="space-y-1">
-            <li>All Plants</li>
-          </ul>
+          <div id="category-names" class="space-y-1"></div>
         </div>
 
-        <div class="md:w-8/11 mx-auto">
+        <div class="w-full md:w-2/3">
           <div
             id="tree-card-container"
-            class="grid sm:grid-cols-2 md:grid-cols-3 gap-5"
+            class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 w-full"
+          ></div>
+          <div
+            id="category-plants"
+            class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 w-full"
           ></div>
         </div>
 
-        <div class="w-2/11 mx-auto bg-green-300">
+        <div class="w-full md:w-1/6 bg-green-300">
           <h2>cart</h2>
         </div>
       </section>
@@ -119,7 +138,7 @@
         </div>
       </section>
 
-      <section class="w-11/12 mx-auto bg-[#cff0dc] p-20 space-y-5 mt-15">
+      <section class="w-11/12 mx-auto bg-[#cff0dc] px-5 py-20 space-y-5 mt-16">
         <h2 class="text-2xl font-bold text-center">Our Impact</h2>
 
         <div
