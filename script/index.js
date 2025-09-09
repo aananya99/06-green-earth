@@ -10,7 +10,7 @@ const displayTreeCategory = (categories) => {
   categories.forEach((category) => {
     const categoryName = document.createElement("div");
     categoryName.innerHTML = `<div class="flex flex-col">
-    <button onclick=" loadEachCategoryPlant(${category.id})"class="btn w-full shadow-sm ">${category.category_name}</button>
+    <button onclick=" loadEachCategoryPlant(${category.id})"class="btn w-full shadow-sm hover:bg-[#166534] hover:text-white">${category.category_name}</button>
     </div>
     `;
 
